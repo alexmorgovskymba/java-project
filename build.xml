@@ -41,7 +41,7 @@
     </jar>
   </target>
 
-  <target name="test" depends="jar">
+  <target name="test">
     <junit printsummary="yes" haltonfailure="yes">
       <classpath refid="class.path"/>
       <test name="RectangleTest">
@@ -51,7 +51,7 @@
     </junit>
   </target>
 
-  <target name="main" depends="compile, jar, test">
+  <target name="main" depends="compile, jar">
     <description>Main target</description>
   </target>
 
