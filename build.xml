@@ -34,15 +34,26 @@
 
   <!--Creates the deployable jar file  -->
   <target name="jar" depends="compile">
-    <jar destfile="${dist.dir}\rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar" basedir="${build.dir}">
+    <jar destfile="${dist.dir}\rectangle.${env.BUILD_NUMBER}.jar" basedir="${build.dir}">
       <manifest>
         <attribute name="Main-Class" value="Rectangulator" />
       </manifest>
     </jar>
   </target>
 
-  <target name="main" depends="compile, jar">
+  <target name="test" depends="jar">
+    <junit printsummary="yes" haltonfailure="yes">
+      <classpath refid="class.path"/>
+      <test name="RectangleTest">
+	<formatter type="plain"/>
+        <formatter type="xml"/>
+      </test>
+    </junit>
+  </target>
+
+  <target name="main" depends="compile, jar, test">
     <description>Main target</description>
   </target>
+
 
 </project>
