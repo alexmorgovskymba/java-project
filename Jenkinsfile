@@ -11,7 +11,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'ant -f build.xml test -v'
-        
+      }
   }
 
   post {
