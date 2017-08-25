@@ -12,6 +12,7 @@ pipeline {
       steps {
         sh 'ant -f build.xml test -v'
       }
+    }
   }
 
   post {
