@@ -8,7 +8,7 @@
   <property name="build.dir" location="bin" />
   <property name="dist.dir" location="dist" />
 
-  <property name="branch" value="dev"/>
+  <property name="branch" value="development"/>
 
   <target name="info">
     <echo>The value of [branch] is ${branch}</echo>
