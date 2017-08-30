@@ -8,6 +8,12 @@
   <property name="build.dir" location="bin" />
   <property name="dist.dir" location="dist" />
 
+  <property name="branch" value="dev"/>
+
+  <target name="info">
+    <echo>The value of [branch] is ${branch}</echo>
+  </target>
+
   <path id="class.path">
     <pathelement location="./lib/junit-4.10.jar" />
     <pathelement location="${build.dir}" />
