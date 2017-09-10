@@ -15,7 +15,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'ant -f build.xml test -v'
-	echo ${env.MYVAR}
+	echo '${env.MYVAR}'
       }
     }
   }
